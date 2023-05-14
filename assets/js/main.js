@@ -20,6 +20,7 @@ const restart = () => {
      outputRounds.innerHTML = ``;
      outputSpielstand.innerHTML = `0 : 0`;
      outputErgebnisSpielrunde.innerHTML = `Mache deinen Spielzug!`;
+     outputErgebnisSpielrunde.classList.remove("ende-win-lose");
      return rundenGespielt = 0, c = 0, u = 0;
 }
 
@@ -28,7 +29,6 @@ const playgame = (user) => {
 
      playSec.classList.remove("play-sec-losing");
      playSec.classList.remove("play-sec-winning");
-     outputErgebnisSpielrunde.classList.remove("ende-win-lose");
 
      const rounds = Number(document.querySelector("input[name='rounds']:checked").value);
      roundsDisappear.style.top = "-100rem";
