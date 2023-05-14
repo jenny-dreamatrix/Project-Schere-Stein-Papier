@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="img-sec-left">
+        <h1>
+          Schere Stein Papier Schere Stein Papier Schere Stein Papier Schere
+          Stein Papier Schere Stein Papier Schere Stein Papier
+        </h1>
+      </section>
+      <section class="play-sec">
+        <form>
+          <p class="spielstand-user">Spieler</p>
+          <p class="spielstand-computer">Computer</p>
+          <figure class="rounds-disappear">
+            <label for="rounds">Wie viele Runden willst du spielen?</label>
+            <div>
+              <input type="radio" name="rounds" id="five" value="5" checked />
+              <label for="five">5</label>
+              <input type="radio" name="rounds" id="ten" value="10" />
+              <label for="ten">10</label>
+              <input type="radio" name="rounds" id="fifteen" value="15" />
+              <label for="fifteen">15</label>
+              <input type="radio" name="rounds" id="twenty" value="20" />
+              <label for="twenty">20</label>
+            </div>
+          </figure>
+
+          <figure class="output-rounds"></figure>
+
+          <figure>
+            <p>Spielstand</p>
+            <p class="output-spielstand">0 : 0</p>
+          </figure>
+
+          <p class="output-ergebnis-spielrunde">Mache deinen Spielzug!</p>
+
+          <figure class="buttons-fig">
+            <button class="play-btn" onclick="playgame('Schere')">
+              <img
+                class="schere"
+                src="./assets/img/icons8-hand-scissors-96.png"
+                alt=""
+              />
+              Schere
+            </button>
+            <button class="play-btn" onclick="playgame('Stein')">
+              <img src="./assets/img/icons8-clenched-fist-96.png" alt="" />
+              Stein
+            </button>
+            <button class="play-btn" onclick="playgame('Papier')">
+              <img src="./assets/img/icons8-hand-96.png" alt="" />
+              Papier
+            </button>
+          </figure>
+
+          <button class="restart-btn" onclick="restart()" href="#">
+            Nochmal von vorn!
+          </button>
+        </form>
+      </section>
+      <section class="img-sec-right">
+        <h1>
+          Schere Stein Papier Schere Stein Papier Schere Stein Papier Schere
+          Stein Papier Schere Stein Papier Schere Stein Papier
+        </h1>
+      </section>
+    </main>
+
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+  </body>
+</html>

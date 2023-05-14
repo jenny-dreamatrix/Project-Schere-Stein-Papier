@@ -1,0 +1,319 @@
+@font-face {
+  font-family: SpecialElite;
+  src: url(../fonts/SpecialElite-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "SpecialElite";
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --color-light: #cab6a0;
+  --color-warm: #9c8065;
+  --color-text: #6e5b4a;
+  --color-dark: #322922;
+  --color-white: white;
+  --color-black: rgb(30, 30, 30);
+  --white-bg: rgba(255, 255, 255, 0.699);
+}
+
+h1 {
+  font-size: 7rem;
+  color: var(--color-white);
+  text-shadow: -2px -2px 1px var(--color-light);
+}
+
+p,
+a,
+button,
+label {
+  font-size: 2rem;
+  color: var(--color-text);
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  text-align: center;
+  margin: 0 0 2rem 0;
+}
+
+/* texthervorhebungen */
+
+span {
+  color: var(--color-light);
+}
+
+.win,
+.lost {
+  text-decoration: underline;
+  color: var(--color-warm);
+}
+
+/* main */
+
+main {
+  height: 100vh;
+  background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.472) 12%,
+      rgba(255, 255, 255, 0.841) 100%
+    ),
+    url(../img/sj-objio-XFWiZTa2Ub0-unsplash.jpg) no-repeat center;
+  background-size: cover;
+  display: flex;
+  padding: 2rem 3rem 2rem 3rem;
+}
+
+/* side sections */
+
+.img-sec-left,
+.img-sec-right {
+  width: 20%;
+  overflow: hidden;
+}
+
+.img-sec-left h1 {
+  text-align: right;
+}
+
+/* play section */
+
+.play-sec {
+  width: 80rem;
+  height: 100%;
+  background-color: var(--white-bg);
+  border: 5px solid white;
+  border-radius: 5rem;
+  padding: 3rem;
+  margin: 0 2rem;
+  transition: 1s ease-in-out;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  transition: 1s ease-in-out;
+  position: relative;
+  padding: 15rem 0 0 0;
+  overflow: hidden;
+}
+
+/* wie viele runden willst du spielen? */
+
+.rounds-disappear {
+  height: 15rem;
+  width: 100%;
+  background-color: var(--white-bg);
+  padding: 3rem;
+  border: 5px solid white;
+  border-radius: 5rem;
+  margin: 0 0 3rem 0;
+  position: absolute;
+  top: 0;
+  transition: 2s ease-in-out;
+}
+
+div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+/* input / label */
+
+label[for="rounds"] {
+  font-size: 2.5rem;
+  text-align: center;
+  display: block;
+  margin: 0 0 2rem 0;
+}
+
+input[type="radio"] {
+  accent-color: var(--color-text);
+  margin: 0 1rem 0 3rem;
+}
+
+/* output felder */
+
+.output-spielstand {
+  font-size: 8rem;
+}
+
+.output-rounds p:nth-of-type(2) {
+  font-size: 4rem;
+}
+
+.spielstand-computer,
+.spielstand-user {
+  position: absolute;
+  top: 22rem;
+  transition: 1s ease-in-out;
+  font-size: 4rem;
+  color: var(--color-warm);
+}
+
+.spielstand-user {
+  left: -100rem;
+}
+
+.spielstand-computer {
+  right: -100rem;
+}
+
+.output-ergebnis-spielrunde {
+  width: 42rem;
+  margin: 0 auto;
+  line-height: 3rem;
+}
+
+/* buttons */
+
+.buttons-fig {
+  display: flex;
+  gap: 1rem;
+}
+
+.play-btn,
+.restart-btn {
+  height: 8rem;
+  width: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  color: var(--color-white);
+  background-color: var(--color-warm);
+  border: none;
+  border-radius: 5rem;
+  margin: 0 0 1rem 0;
+  transition: 0.5s ease-in-out;
+}
+
+.restart-btn {
+  width: 100%;
+  background-color: var(--color-light);
+}
+
+/* icons für buttons */
+
+.play-btn img {
+  width: 12%;
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+  transition: 0.5s ease-in-out;
+}
+
+.schere {
+  width: 14%;
+}
+
+/* hover effects für buttons */
+
+.play-btn:hover {
+  background-color: var(--color-light);
+  color: var(--color-light);
+  cursor: pointer;
+}
+.play-btn:hover:nth-of-type(1) img {
+  transform: scale(1.4) translateX(3.8rem);
+}
+.play-btn:hover:nth-of-type(2) img {
+  transform: scale(1.3) translateX(3.5rem);
+}
+.play-btn:hover:nth-of-type(3) img {
+  transform: scale(1.3) translateX(3.8rem);
+}
+
+.restart-btn:hover {
+  text-decoration: underline;
+  background-color: var(--color-warm);
+  cursor: pointer;
+}
+
+/* animations */
+
+@keyframes losing {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes winning {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  75% {
+    transform: scale(1.05);
+  }
+}
+
+.play-sec-losing {
+  animation: losing 0.5s ease-in-out;
+  background-color: var(--color-dark);
+}
+.play-sec-winning {
+  animation: winning 0.5s ease-in-out;
+  background-color: var(--color-white);
+}
+
+@keyframes ende-win-lose {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(2);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  75% {
+    transform: scale(2);
+  }
+}
+
+.ende-win-lose {
+  animation: ende-win-lose 1s ease-in-out;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateY(-50rem);
+  }
+  to {
+    transform: translateY(0rem);
+  }
+}
+
+h1 {
+  animation: scroll 18s linear infinite alternate;
+}
