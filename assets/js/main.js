@@ -21,6 +21,8 @@ const restart = () => {
      outputSpielstand.innerHTML = `0 : 0`;
      outputErgebnisSpielrunde.innerHTML = `Mache deinen Spielzug!`;
      outputErgebnisSpielrunde.classList.remove("ende-win-lose");
+     playSec.classList.remove("play-sec-losing");
+     playSec.classList.remove("play-sec-winning");
      return rundenGespielt = 0, c = 0, u = 0;
 }
 
